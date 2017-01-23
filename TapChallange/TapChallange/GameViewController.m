@@ -6,7 +6,9 @@
 //  Copyright © 2017 AgostinoRomanelli. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "GameViewController.h"
+#import "ScoreTableViewController.h"
+
 
 #define GameTimer 1
 #define GameTime 3
@@ -14,7 +16,7 @@
 #define Defaults [NSUserDefaults standardUserDefaults]
 #define Results @"UserScore"
 
-@interface ViewController (){
+@interface GameViewController (){
     int _tapsCount;
     int _timeCount;
     
@@ -23,7 +25,7 @@
 
 @end
 
-@implementation ViewController
+@implementation GameViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,12 +33,22 @@
     
     [self inizializeGame];
     
+    
+       //Setto il navigation bar title
+ 
+    self.title = @"TapChallenge";
+    
+    UIBarButtonItem * scoreButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemBookmarks target:self action:@selector(scoreButtonPressed)];
+    
+    //imposto il pulante come elemento alla DX della mia navigatorBar
+    self.navigationItem.rightBarButtonItem = scoreButtonItem;
+    
 }
 
 
 -(void)viewDidAppear:(BOOL)animated{
-    
-    if(![self isFirstAppLaunch]){
+    /*
+     if(![self isFirstAppLaunch]){
         [Defaults setBool:true forKey:FirstAppLaunch];
         [Defaults synchronize];
     } else {
@@ -44,8 +56,9 @@
         if (results.count > 0)
             [self mostraUltimoRisultato:((NSNumber*) results.lastObject).intValue];
     }
+     */
+    [self resumeGame];
 }
-
 
 
 - (void)didReceiveMemoryWarning {
@@ -62,19 +75,53 @@
     
 }
 
+
+#pragma mark - Play / Pause game
+
+-(void)pauseGame {
+    if (_gameTimer != nil) {
+        [_gameTimer invalidate];
+        _gameTimer = nil;
+    }
+}
+
+-(void)resumeGame {
+    if (_timeCount != 0 && _tapsCount > 0) {
+        _gameTimer = [NSTimer scheduledTimerWithTimeInterval:GameTimer target:self selector:@selector(timerTick) userInfo:nil repeats:true];
+    }
+}
+
+
 #pragma mark - Actions
 
--(IBAction)buttonPressed:(id)sender{
+-(void)scoreButtonPressed{
+    
+    /*UIViewController *viewController = [[UIViewController alloc]init];
+    viewController.title = @"nuovo";
+    viewController.view.backgroundColor = [UIColor redColor];*/
+    // pusho all'interno dello stack del mio navigationController un nuovo View controller
+    
+        ScoreTableViewController *tableViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"ScoreTableViewController"];
+    tableViewController.delegate = self;
+    
+    [self.navigationController pushViewController:tableViewController animated:true];
+}
+
+-(IBAction)tapGestureRecognizerDidRecognizeTap:(id)sender{
     //loggo in console il valore dei taps effettuati
     NSLog(@"button pressed: %i", _tapsCount);
     
     if(_gameTimer==nil){
         _gameTimer = [NSTimer scheduledTimerWithTimeInterval: GameTimer target:self selector:@selector(timerTick) userInfo:nil repeats:true];
     }
-
+    
     
     _tapsCount++;
     [self.tapCountLabel setText:[NSString stringWithFormat:@"%i", _tapsCount]];
+}
+
+-(IBAction)buttonPressed:(id)sender{
+
 }
 
 -(void)timerTick{
@@ -159,7 +206,6 @@
     
     //OLD way
     //NSNumber *number = [NSNumber numberWithInt:_tapsCount];
-    
     //new fashion way
     [array addObject:@(_tapsCount)];
     
@@ -185,7 +231,13 @@
 }
 
 
+#pragma mark - ScoreTableViewDelegate
 
+-(NSArray *)scoreTableViewFetchResults {
+    return [self risultati];
+}
 
-
+-(void)scoreTableViewDidFetchResults {
+    NSLog(@"%s", __PRETTY_FUNCTION__);
+}
 @end

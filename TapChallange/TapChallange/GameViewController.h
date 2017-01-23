@@ -8,12 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface GameViewController : UIViewController
 
 @property (nonatomic, weak)IBOutlet UILabel *tapCountLabel;
 @property (nonatomic, weak)IBOutlet UILabel *timeLabel;
 
 -(IBAction)buttonPressed:(id)sender;
+
+-(IBAction)tapGestureRecognizerDidRecognizeTap:(id)sender;
+
+
 
 @end
 

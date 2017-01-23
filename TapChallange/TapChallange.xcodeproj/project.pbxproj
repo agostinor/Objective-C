@@ -7,21 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F8A17EE01E2FB1DB00F4C797 /* ScoreTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8A17EDF1E2FB1DB00F4C797 /* ScoreTableViewController.m */; };
 		F8CFACE91E291C3800DC751B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CFACE81E291C3800DC751B /* main.m */; };
 		F8CFACEC1E291C3800DC751B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CFACEB1E291C3800DC751B /* AppDelegate.m */; };
-		F8CFACEF1E291C3800DC751B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CFACEE1E291C3800DC751B /* ViewController.m */; };
+		F8CFACEF1E291C3800DC751B /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F8CFACEE1E291C3800DC751B /* GameViewController.m */; };
 		F8CFACF21E291C3800DC751B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CFACF01E291C3800DC751B /* Main.storyboard */; };
 		F8CFACF41E291C3800DC751B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8CFACF31E291C3800DC751B /* Assets.xcassets */; };
 		F8CFACF71E291C3800DC751B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8CFACF51E291C3800DC751B /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F8A17EDE1E2FB1DB00F4C797 /* ScoreTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScoreTableViewController.h; sourceTree = "<group>"; };
+		F8A17EDF1E2FB1DB00F4C797 /* ScoreTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScoreTableViewController.m; sourceTree = "<group>"; };
 		F8CFACE41E291C3800DC751B /* TapChallange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TapChallange.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CFACE81E291C3800DC751B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		F8CFACEA1E291C3800DC751B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		F8CFACEB1E291C3800DC751B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		F8CFACED1E291C3800DC751B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		F8CFACEE1E291C3800DC751B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		F8CFACED1E291C3800DC751B /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
+		F8CFACEE1E291C3800DC751B /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		F8CFACF11E291C3800DC751B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F8CFACF31E291C3800DC751B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F8CFACF61E291C3800DC751B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,13 +63,15 @@
 			children = (
 				F8CFACEA1E291C3800DC751B /* AppDelegate.h */,
 				F8CFACEB1E291C3800DC751B /* AppDelegate.m */,
-				F8CFACED1E291C3800DC751B /* ViewController.h */,
-				F8CFACEE1E291C3800DC751B /* ViewController.m */,
+				F8CFACED1E291C3800DC751B /* GameViewController.h */,
+				F8CFACEE1E291C3800DC751B /* GameViewController.m */,
 				F8CFACF01E291C3800DC751B /* Main.storyboard */,
 				F8CFACF31E291C3800DC751B /* Assets.xcassets */,
 				F8CFACF51E291C3800DC751B /* LaunchScreen.storyboard */,
 				F8CFACF81E291C3800DC751B /* Info.plist */,
 				F8CFACE71E291C3800DC751B /* Supporting Files */,
+				F8A17EDE1E2FB1DB00F4C797 /* ScoreTableViewController.h */,
+				F8A17EDF1E2FB1DB00F4C797 /* ScoreTableViewController.m */,
 			);
 			path = TapChallange;
 			sourceTree = "<group>";
@@ -150,7 +155,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8CFACEF1E291C3800DC751B /* ViewController.m in Sources */,
+				F8A17EE01E2FB1DB00F4C797 /* ScoreTableViewController.m in Sources */,
+				F8CFACEF1E291C3800DC751B /* GameViewController.m in Sources */,
 				F8CFACEC1E291C3800DC751B /* AppDelegate.m in Sources */,
 				F8CFACE91E291C3800DC751B /* main.m in Sources */,
 			);
@@ -307,6 +313,7 @@
 				F8CFACFD1E291C3800DC751B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
