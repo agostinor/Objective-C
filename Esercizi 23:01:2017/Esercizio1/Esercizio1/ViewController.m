@@ -20,7 +20,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"Gino parigino");
     // Do any additional setup after loading the view, typically from a nib.
 }
 
@@ -41,5 +40,11 @@
 
 -(IBAction)Plus:(id)sender{
     self.VisualizzaNome.text = self.InseisciNome.text;
+    
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Risultati" message:[NSString stringWithFormat:@"gino"]  preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAlertAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil];
+    
+    [alertController addAction:okAlertAction];
+    [self presentViewController:alertController animated:true completion:nil];
 }
 @end

@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  Esercizio2
+//  Esercizio3
 //
 //  Created by Agostino Romanelli on 05/02/17.
 //  Copyright © 2017 AgostinoRomanelli. All rights reserved.
@@ -10,9 +10,10 @@
 
 @interface ViewController : UIViewController
 
-@property (nonatomic, weak) IBOutlet UILabel *VisualizzaRisultato;
-@property (nonatomic, weak) IBOutlet UITextField *InserisciNumero;
-@property (nonatomic, weak) IBOutlet UIButton *Controlla;
+@property (nonatomic, weak)IBOutlet UILabel *Domanda;
+
+-(IBAction)ButtonSI:(id)sender;
+-(IBAction)ButtonNO:(id)sender;
 
 @end
 

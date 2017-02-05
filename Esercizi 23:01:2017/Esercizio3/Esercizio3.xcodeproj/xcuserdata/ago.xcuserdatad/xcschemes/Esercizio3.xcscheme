@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F8BF705E1E4734DA00E60823"
-               BuildableName = "Esercizio2.app"
-               BlueprintName = "Esercizio2"
-               ReferencedContainer = "container:Esercizio2.xcodeproj">
+               BlueprintIdentifier = "F8DF5F521E477D8600270740"
+               BuildableName = "Esercizio3.app"
+               BlueprintName = "Esercizio3"
+               ReferencedContainer = "container:Esercizio3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8BF705E1E4734DA00E60823"
-            BuildableName = "Esercizio2.app"
-            BlueprintName = "Esercizio2"
-            ReferencedContainer = "container:Esercizio2.xcodeproj">
+            BlueprintIdentifier = "F8DF5F521E477D8600270740"
+            BuildableName = "Esercizio3.app"
+            BlueprintName = "Esercizio3"
+            ReferencedContainer = "container:Esercizio3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8BF705E1E4734DA00E60823"
-            BuildableName = "Esercizio2.app"
-            BlueprintName = "Esercizio2"
-            ReferencedContainer = "container:Esercizio2.xcodeproj">
+            BlueprintIdentifier = "F8DF5F521E477D8600270740"
+            BuildableName = "Esercizio3.app"
+            BlueprintName = "Esercizio3"
+            ReferencedContainer = "container:Esercizio3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F8BF705E1E4734DA00E60823"
-            BuildableName = "Esercizio2.app"
-            BlueprintName = "Esercizio2"
-            ReferencedContainer = "container:Esercizio2.xcodeproj">
+            BlueprintIdentifier = "F8DF5F521E477D8600270740"
+            BuildableName = "Esercizio3.app"
+            BlueprintName = "Esercizio3"
+            ReferencedContainer = "container:Esercizio3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
