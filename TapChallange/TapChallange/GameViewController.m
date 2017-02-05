@@ -185,7 +185,6 @@
 
 -(NSArray *) risultati {
     NSArray *array = [Defaults objectForKey:Results];
-                       
                        if(array == nil){
                            array = @[];
                        }
